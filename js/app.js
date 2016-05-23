@@ -22,7 +22,7 @@ $(document).ready(function() {
 		$('.hulk-ryu-ow').delay(790).queue(function(n) {
 			$(this).show(); n();
 		});
-		$('.hulk-ryu-ow').delay(1000).queue(function(o) {
+		$('.hulk-ryu-ow').delay(1000).queue(function(n) {
 			$(this).hide(); n();
 		});
 	})
