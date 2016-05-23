@@ -2,6 +2,20 @@ body {
 	background-color: #000000;
 }
 
+.instructions {
+	color: white;
+	width: 800px;
+	height: 110px;
+	position: absolute;
+	top: 0;
+	left: 300px;
+}
+
+.instructions p {
+	margin: 0;
+	padding: 1px;
+}
+
 .main {
 	background-color: #FFFFFF;
 	margin-top: 110px;
@@ -18,29 +32,34 @@ body {
 	height: 494px;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .hulk-ryu-ready, .hulk-ryu-throwing, .hulk-ryu-cool, .hulk-ryu-still {
 	width: 659px;
 	height: 494px;
 }
 
-.ryu-ready, .ryu-throwing, .ryu-cool {
+.ryu-ready, .ryu-throwing, .ryu-cool, .hulk-ryu-ready, .hulk-ryu-throwing, .hulk-ryu-cool {
 	display: none;
 }
 
-.ryu-ready {
+.ryu-ready, .hulk-ryu-ready {
 	background-image: url('../images/ryu-ready-position.gif');
 }
 
-.ryu-still {
+.ryu-still, .hulk-ryu-still {
 	background-image: url('../images/ryu-standing-still.png');
 }
 
-.ryu-throwing {
+.ryu-throwing, .hulk-ryu-throwing {
  	background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
-.ryu-cool {
+.ryu-cool, .hulk-ryu-cool {
 	background-image: url('../images/ryu-cool.gif');
+}
+
+.hulk-ryu-ready, .hulk-ryu-throwing, .hulk-ryu-cool, .hulk-ryu-still, .hulk-hadouken {
+	transform: scaleX(-1);
+	filter: hue-rotate(90deg);
 }
 
 .hadouken {
@@ -56,9 +75,71 @@ body {
 
 }
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
+.hulk-hadouken {
+	float: left;
+	background-image: url('../images/hadouken.gif');
+	width: 156px;
+	height: 90px;
+	display: none;
+	position:absolute;
+	z-index: 10;
+	top: 166px;
+	left: 865px;
+}
+
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .hulk-ryu, .hulk-ryu-ready, .hulk-ryu-throwing, .hulk-ryu-cool, .hulk-ryu-still, .hulk-hadouken {
   background-repeat: no-repeat;
 }
+
+.hulk-ryu {
+	float: left;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 800px;
+	width: 494px;
+	height: 659px;
+}
+
+.ryu-ow {
+	float: left;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 250px;
+	font-size: 24px;
+	display: none;
+}
+
+.hulk-ryu-ow {
+	float: left;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 1200px;
+	font-size: 24px;
+	display: none;
+}
+
+.ryu-v-hulk-ryu {
+	width: 100px;
+	height: 500px;
+	position: absolute;
+	top: 70px;
+	left: 675px;
+	text-align: center;
+}
+
+.ryutext {
+	color: red;
+	font-size: 40px;
+}
+
+.hulkryutext {
+	color: green;
+	font-size: 40px;
+}
+
 
 /* * {
 	outline: red 1px solid;
